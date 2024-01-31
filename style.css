@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://cdn.beruehmt.net/fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: bold;
+    src: url('https://cdn.beruehmt.net/fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    src: url('https://cdn.beruehmt.net/fonts/poppins/Poppins-Italic.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+body > section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body > section:nth-child(1) {
+    background-color: #ff8888;
+    color: #ffffff;
+}
+
+body > section:nth-child(2) {
+    background-color: #44ff44;
+    color: #ffffff;
+    gap: 2rem;
+}
+
+.fix-button {
+    appearance: none;
+    background-color: #f7f7f7;
+    color: #000000;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out
+}
+
+.fix-button:hover {
+    background-color: #f0f0f0;
+}
+
+#bad-contrast {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+#bad-contrast > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#bad-contrast > div > div {
+    height: 25rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+#bad-contrast > div > div#contrast-text {
+    background-color: #f6fdd4;
+    color: #ffffff;
+}
+
+#bad-contrast > div > div#contrast-image {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b8/Panthera_leo_massaica_mating.jpg');
+    background-size: cover;
+    color: #000000;
+}
+
+#bad-contrast > div > div#contrast-text.fixed {
+    color: #000000;
+}
+
+#bad-contrast > div > div#contrast-image.fixed {
+    color: #ffffff;
+}
